@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+   <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    
+             
+        <nav id="navbar">
+
+                     
+                            <ul>
+                                  <li><a href="#home">Home</a></li>
+                                  <li><a href="#about">About</a></li>
+                                  <li><a href="#contact">Contact</a></li>
+                                  
+                            </ul>
+
+
+                     </nav>
+
+    
+        
+
+
+   <header id="home">
+
+    
+ <section class="contanar">
+
+        <h2>Welcome to my website</h2>
+
+ </section>
+
+
+   </header>
+
+  <!-- lets seeeeeeeeeeee-->
+
+ <section id="about">
+    <div class="big-box">
+  <div class="intro-box">
+      <div class="text-g">
+        <h4>Introduction</h4>
+        <P>This is my first own website, in which i have practice different HTML concepts such as forms, clickable images, SignIn  etc.Also designing it using CSS with transition, animation, and using JavaScript for scroll animations.This is my practice Website. </P>
+      </div>
+    </div> 
+    <div class="img-box">
+      <img src="Umair_Saleem.jpg" class="img-g">
+    </div>
+    </div>
+    
+   </section>
+
+
+
+   
+
+
+
+   <section class="page">
+    <div class="box1">
+      <img src="minar-e-pakistan.jpg" class="box1img">
+      <h5 class="rem">Minar-e-Pakistan</h5>
+      <p class="paracom">Minar-e-Pakistan is a public monument tower located in Lahore, Punjab, Pakistan. The tower was built during 1960–1968 on the site where on 23 March 1940, the All-India Muslim League passed the Lahore Resolution which was later called the Pakistan Resolution – the first official call for a separate and independent homeland for the Muslims of British India, as espoused by the two-nation theory. The resolution eventually helped lead to the creation of Pakistan in 1947.</p>
+    </div>
+     <div class="box2">
+      <img src="fasil-mosque.jpg" class="box2img">
+      <h5 class="rem"> Faisal masjid</h5>
+      <p class="paracom"> The Faisal Mosque is the national mosque of Pakistan, located in Islamabad, the capital of the country. It is the sixth-largest mosque in the world, the largest mosque outside the Middle East, and the largest within South Asia, located on the foothills of Margalla Hills. It is named after the late King Faisal of Saudi Arabia (r. 1964–75).</p>
+     </div>
+      <div class="box3">
+        <img src="badshah-mosque.jpg" class="box3img">
+        <h5 class="rem"> Badshahi Mosque</h5>
+        <p class="paracom"> The Badshahi Mosque is a Mughal-era imperial mosque located in Lahore, Punjab, Pakistan. It was constructed between 1671 and 1673 during the rule of Aurangzeb, opposite of the Lahore Fort on the northern outskirts of the historic Walled City. It is widely considered to be one of the most iconic landmarks of Pakistan.</p>
+      </div>
+           <div class="box4">
+            <img src="mazar-e-quid.jpg" class="box4img">
+            <h5 class="rem">Mazar-e-Quaid</h5>
+            <p class="paracom">Mazar-e-Quaid, also known as Jinnah Mausoleum or the National Mausoleum, is the final resting place of Muhammad Ali Jinnah, the founder of Pakistan. Designed in a 1960s modernist style, it was completed in 1971, and is an iconic symbol of Karachi as well as one of the most popular tourist sites in the city.</p>
+             </div>
+     
+          
+   </section>
+
+   <!-- second intro box --------------------- -->
+    
+ 
+
+
+
+   
+  
+
+
+
+   <!-- Education---------------------------------->
+ 
+
+<!-- content formmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm-->
+
+
+
+   <section id="contact">
+    <div class="contact-box">
+        
+      <h4 class="he">Contact Me</h4>
+    
+      <div class="Form1">
+      <form action="submit.php">
+      
+      <label class="text-c"> Name</label>
+      <input type="text" name="user" class="box-c">
+
+      <label class="text-c"> Email</label>
+      <input type="email"  name="email" class="box-c">
+
+      <label class="text-c"> Message</label><br>
+      <textarea name="Message" rows="5" placeholder="Type your message here......"></textarea>
+      
+      
+      <button type="submit" class="btn">Send</button>
+    </form>
+
+
+      </div>
+
+    </div>
+</section>
+
+<!-- form fillllllllllllllllllllllllllll------------------------- -->
+
+
+<section>
+  <div class="big-form">
+    <h3>Form fill</h3>
+
+    <div class="form2">
+      <form action="submit.php" method="post">
+        <label class="headings"> First Name :</label>
+        <input type="text" name="firstname" class="headingbox" >    <!-- name is the attribute that tells the backend that what type of data is entered ,like in here, backend sees that "lastname=......" so it will tell backend that its lastname not posswaord or date or time etc -->
+
+        <label class="headings"> Last Name :</label>
+        <input type="text" name="lastname" class="headingbox"> 
+   <br>
+        <label class="headings">Gender :</label>
+        <label>
+          <input type="radio" name="gender" value="male">
+          Male
+        </label>
+        <label>
+          <input type="radio" name="gender" value="female">
+          female
+        </label>
+        <label>
+          <input type="radio" name="gender" value="other">
+          others
+        </label>
+<br>
+        <label class="headings">Email :</label>
+        <input type="email" class="headingbox" placeholder="Enter email address">   
+
+        <label class="headings"> Country :</label>
+
+        <select  name="country" class="headingbox">       <!--here name will tell the backend that user is selecting country-->
+        <option value="none">---</option>               <!-- where as value is the attribute which tells the backend whats the user selected or answered like in option when i select pakistan, value will tell backend that i selected pk ,similarly if it slected "---" the value of"none" will go to backend and we can then show error so -->
+        <option value="pk">Pakistan</option>
+        <option value="ind">India</option>
+        <option value="eng">England</option>
+        </select>
+<br>
+        <label class="headings">Date of Birth :</label>
+        <input type="date" class="headingbox" >
+        
+        <label class="headings">Phone No :</label>
+        <input type="number" class="headingbox">
+       <br>
+        <label class="headings">Message</label>
+        <textarea class="messagebox1" rows="5" placeholder="Type your message...."></textarea>
+ 
+        
+       <button type="submit" class="btn2"> Submit</button>
+       <button type="reset" class="btn2">Reset</button>
+
+
+      </form>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- <section>
+  <div class="loginS">
+  
+  <div class="loginF">
+
+       <div  class="loginh">
+        <h4> Login</h4>
+         </div>
+    
+    <form action="submit.php" >
+ 
+        
+        <input class="input"   type="text" class="textup" placeholder=" " required id="name" >
+        <label class="label" for="name">Username</label>
+        <input type="password" class="textup" placeholder="Password" name="password">
+      </form>
+       </div>
+
+</div>
+  
+</section> -->
+
+ <!-- Sign in form ---------------------- -->
+
+<section>
+  <div class="loginS">
+    <div class="loginF">
+      <div class="loginh">
+        <h4>SignIn</h4>
+      </div>
+
+      <form action="submit.php">
+        <div class="inputBox">
+          <input class="input" type="text" id="name" placeholder=" " required>
+          <label class="label" for="name">Username</label>
+        </div>
+
+        <div class="inputBox">
+          <input class="input" type="password" id="password" placeholder=" " required>
+          <label class="label" for="password">Password</label>
+        </div>
+
+        
+          <button type="submit" class="signinbtn">SignIn</button>
+        <h6 class="other">or sign in with</h6>
+
+        <div class="other1">
+
+          <div class="faceb">
+            <button  class="faceb-btn"   type="button"> <img src="icons8-facebook-logo.svg"></button>
+          </div>
+
+          <div class="google">
+            <button  class="google-btn" type="button"> <img src="google-original-logo.svg"></button>
+          </div>
+        </div>
+
+        <div class="fbpass">
+        <a href="/forgetpassword" target="_blank" class="fpass">Forgot password</a>
+        </div>
+     
+      </form>
+    </div>
+  </div>
+</section>
+
+ <!-- languageeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+
+<section class="langu">
+  <div class="langus">
+  <h4>Languages</h4>
+   
+
+  <div class="lang">
+       <h5> English</h5>
+      <div class="bar ">
+         <div class="progress english" data-width="90%"></div>                <!--  these are two classes 1) progresd and 2) englieh -->
+    </div>
+  </div>
+
+  <div class="lang">
+       <h5> Germen</h5>
+      <div class="bar">
+         <div class="progress german" data-width="65%"></div>
+    </div>
+  </div>
+
+  <div class="lang">
+       <h5> Urdu</h5>
+      <div class="bar">
+         <div class="progress urdu" data-width="100%"></div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+ <script src="script.js" defer></script>
+</html>

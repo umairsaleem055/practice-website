@@ -1,0 +1,1109 @@
+
+* {
+
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+
+}
+
+
+
+
+header{
+
+    
+    height: 100vh;
+    /* background: linear-gradient(90deg, #0a174e, #f5d042); */
+    background: #9cf6fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+/* navigation------------------------------- */
+
+ #navbar{
+
+   
+    position: fixed;
+    top: 0;
+     text-align: center;
+    display: flex;
+      justify-content: center;
+    align-items: center; 
+    padding: 0.5rem;
+   background-color: rgba(173, 173, 187, 0.496);
+   width: 100%;
+   z-index: 9999;              /* so z-index is like the pority index as the navigation was getting hidden in the contaners so z-index higher number make it parotize that it remaings on top */
+
+} 
+
+ #navbar ul{
+
+  
+    list-style: none;        /* in the list ul it removes the bullets point */
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    
+    
+} 
+
+ #navbar a{
+
+    border-radius: 999px;
+    color: black;
+     padding: 6px 10px;   /* first is the vertical spacing (6) and second in horizontal spacing(10) */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+#navbar a:hover{
+
+    color: #f5d042;
+    background-color: #0a174e;
+    
+}
+
+#navbar.shrink{
+ 
+  top: 7px;
+    border-radius: 9999px;
+    width:fit-content;  /* this is the colour that fills in ,so fit contect just fil till the content inside */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0px 34px rgb(17, 15, 15);   /*  this is the syntax ---- box-shadow: offset-x offset-y blur-radius color; */ 
+
+}
+#navbar.shrink a{
+    font-size: 1.1rem;
+    padding: 4px 8px;
+   
+} 
+
+
+
+/* navigation enddddddddddddddddd----------- */
+.contanar{
+
+  font-size: clamp(15px, 5vw, 64px);      /*the best way to make the headings resposive for all screen instead of using @media quiers " clamp(min-size(for small screen), mediem size( for mediem screen), largest size(for large screen) */
+  color: #394f8a;
+  overflow: hidden;
+  
+  font-family: 'Courier New', Courier, monospace;
+}
+ .contanar h2{
+    animation: rotatewel 5s forwards;
+}
+
+  /*   @media ( max-width : 600px){
+
+      .contanar{
+        font-size: 0.9rem;
+      }
+
+      .intro-text{
+        font-size: 0.7rem;
+
+      }
+      .intro-cont{
+        display: flex;
+        flex-direction: column;
+        line-height: 1rem;
+        
+      }
+
+     } */
+  
+@keyframes rotatewel{
+  from{
+    transform: translateX(100%)
+  }
+  to{
+     transform: translateX(0%)
+  }
+    
+  
+}
+
+
+
+.page{
+  display: flex;
+   /* background: linear-gradient(90deg, #0a174e, #f5d042); */
+   background: #394f8a;
+  height: 70vh;
+  
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding:  16px 16px;
+  overflow-y: hidden;
+}
+
+.box1{
+  flex: 0 0 200px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  color: #f5d042;
+  font-size: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 14px #e5b9a8;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a174e;
+  transition: all 0.3s ease-in-out;
+  scroll-snap-align: center;
+  overflow: hidden;
+  position: relative;
+  
+}
+.box1 img{
+
+  height: 100%;
+  width:  100%;
+     object-fit: cover;
+}
+
+.box1:hover{
+   flex: 0 0 300px; 
+   box-shadow: 0 0 20px white;
+
+.box1img{
+  height: 150%;
+  width: 150%;
+  object-fit: cover;
+  filter: brightness(0.4) blur(5px);
+}
+   
+
+.rem{
+  display: none;
+ } 
+.paracom{
+  display: flex;
+  position: absolute;
+  flex: 1;
+  color: white;
+  font-weight: 900;
+ justify-content: center;
+ align-items: center;
+ padding: 0px 20px;
+ z-index: 2;
+  
+}
+
+}
+
+
+
+.box1 h5{
+
+  position: absolute;
+  /* z-index: 7; */
+  top: 5px;
+  color: black;
+  font-weight: 600;
+  font-size: 1.2rem;
+  
+
+}
+.paracom{
+  display: none;
+  font-size: 1rem;
+  line-height: 1.2rem;
+ 
+  animation: paracum 1s ease-in-out;
+}
+
+
+.box2{
+  position: relative;
+  flex: 0 0 200px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+   box-shadow: 0 0 14px #e5b9a8;
+  font-size: 1rem;
+  
+  border-radius: 20px;
+  
+  justify-content: center;
+  align-items: center;
+  background-color: #0a174e;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+ scroll-snap-align: center;
+ 
+}
+.box2 img{
+  height: 150%;
+  width: 150%;
+  object-fit: cover;
+}
+.box2 h5{
+  /* transform: rotate(270deg)      
+  scaleX(2) ;
+  font-size: 1.4rem;        to make the project 2 upright, there are two methods
+  white-space: nowrap; */
+  /* writing-mode: vertical-lr;  /*2 */
+  font-size: 1.4rem; 
+  position: absolute;
+  bottom: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.box2:hover{
+  flex: 0 0 300px;  
+  box-shadow: 0 0 20px white;
+
+.box2img{
+  height: 150%;
+  width: 150%;
+  object-fit: cover;
+  filter: brightness(0.4) blur(5px);  
+}
+
+.rem{
+  display: none;
+ } 
+.paracom{
+  display: flex;
+  position: absolute;
+  flex: 1;
+  color: white;
+  font-weight: 800;
+ justify-content: center;
+ align-items: center;
+ padding: 0px 20px;
+ z-index: 2;
+  
+}
+}
+
+.box3{
+  position: relative;
+  flex: 0 0 200px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  border-radius: 20px;
+   box-shadow: 0 0 14px #e5b9a8;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a174e;
+   scroll-snap-align: center;
+  transition: all 0.3s ease-in-out; 
+  overflow: hidden;
+}
+.box3 img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(1.2);
+}
+.box3 h5{
+  position: absolute;
+  top: 5px;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.box3:hover{
+  flex: 0 0 300px;
+  box-shadow: 0 0 20px white;
+   
+.box3img{
+  height: 150%;
+  width: 150%;
+  object-fit: cover;
+  filter: brightness(0.4) blur(5px);  
+}
+.rem{
+  display: none;
+ } 
+.paracom{
+  display: flex;
+  position: absolute;
+  flex: 1;
+  color: white;
+  font-weight: 800;
+ justify-content: center;
+ align-items: center;
+ padding: 0px 20px;
+ z-index: 2;
+  
+}
+}
+
+.box4{
+  position: relative;
+  flex: 0 0 200px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  border-radius: 20px;
+   box-shadow: 0 0 14px #e5b9a8;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a174e;
+   scroll-snap-align: center;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.box4 img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+.box4 h5
+{
+  position: absolute;
+  bottom: 5px;
+  font-weight: 900;
+  font-size: 1.4rem;
+  color: white;
+}
+.box4:hover{
+  flex: 0 0 300px;
+   box-shadow: 0 0 20px white;
+   
+.box4img{
+  height: 150%;
+  width: 150%;
+  object-fit: cover;
+  filter: brightness(0.4) blur(5px);  
+}
+.rem{
+  display: none;
+ } 
+.paracom{
+  display: flex;
+  position: absolute;
+  flex: 1;
+  color: white;
+  font-weight: 800;
+ justify-content: center;
+ align-items: center;
+ padding: 0px 20px;
+ z-index: 2;
+  
+} 
+}
+
+@keyframes paracum{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
+@media (max-width : 600px)
+{
+  .page{
+    justify-content: flex-start; /* for mobile beasue box 1 was not showing as it is centered in orginal */
+  }
+}
+
+
+
+
+
+
+/* lets seeeeeeeeeeeeeeeeeee */
+
+#about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e5b9a8 ;
+  height: 60vh;
+
+}
+.big-box{
+  display: flex;
+  background-color: #ead6cd;
+  box-shadow: 0 0 32px black;
+  height: 45vh;
+  width: 1000px;
+ 
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.intro-box{
+  flex: 1.5;
+  background-color: #ead6cd;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateX(-70px);
+  transition: all 1s ease-in-out;
+  
+
+}
+
+.text-g{
+  padding: 50px 50px;
+}
+.text-g h4{
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin-bottom: 30px;
+}
+.text-g p{
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+.img-box{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #ead6cd;
+  opacity: 0;
+  transform: translateX(+70px);
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+
+.img-g{
+ 
+  
+  object-fit: fill;
+   border-top-left-radius: 150px;
+  border-bottom-left-radius: 150px;
+  
+  }
+
+ .intro-box.come{
+
+  opacity: 1;
+  transform: translateX(0);
+ }
+
+.img-box.come{
+
+  opacity: 1;
+  transform: translateX(0);
+
+}
+
+@media ( max-width: 600px)
+{
+.img-box{
+  display: none;
+
+}
+.big-box{
+  width: min(80%, 1200px);
+  height: auto;
+
+}
+.text-g{
+  
+  padding: 10px 10px;
+  
+}
+.text-g h4{
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+.text-g p{
+  font-size: 1rem;
+}
+#about{
+  height: 60vh;
+}
+}
+
+
+/* @keyframes fadeL{
+  0%{
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+ 
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeR{
+  0%{
+    opacity: 0;
+    transform: translateX(+70px);
+  }
+  
+  
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */
+
+/* contacttttttttttttttttttttttttttttttt */
+
+#contact{
+
+  height: 70vh;
+  background-color: #00abe1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.contact-box{
+  height: fit-content;
+  width: 700px;
+  background-color: #161f6d;
+  box-shadow: 0 0 4px gold;
+  display: flex;
+  border-radius: 0 50px 0 50px;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  padding: 0 50px;
+}
+
+.contact-box:hover{
+  box-shadow: 0 0 37px white;
+  background-color: #0d1641;
+  
+}
+.he {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  font-weight: bold;
+  color: gold;
+  
+}
+
+
+.Form1{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  
+ 
+}
+.box-c{
+ width: 100%;
+ font-size: 1.3rem;
+ border: none;
+ background-color: rgba(207, 209, 214, 0);
+ border-bottom: 2px solid yellow;
+ color: yellow;
+ outline: none;
+ transition: all 0.3s ease-in-out;
+ 
+}
+.box-c:focus{
+  background-color: rgba(199, 204, 209, 0.092);
+}
+
+.text-c{
+ 
+  color: #f5d042;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid gray;
+  font-size: 16px;
+  resize: none;
+}
+.btn{
+  margin-top: 10px;
+ 
+  height: 50px;
+  width: 100px;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  background-color: #f5d042;
+  color: #0a174e;
+  font-weight: bold;
+  cursor: pointer;
+
+  box-shadow: 0 5px #2d6b2d;
+}
+
+.btn:active {
+  box-shadow: 0 2px #2d6b2d;   /* Reduce shadow (pressed look) */
+  transform: translateY(3px);  /* Push button down */
+}
+
+
+@media(max-width:600px) {
+
+  .contact-box{
+    width: 370px;
+    padding: 0 10px;
+    height: fit-content;
+  }
+
+.box-c{
+  font-size: 1rem;
+}
+.btn{
+  height: 30px;
+  width: 80px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+/* education sectionnnnnnnnnnnnnnnnnnnnnnnnnnn*/
+
+
+
+/* form filllllllllllllllllllllllllllllllllllllllllll*/
+.big-form{
+  height: 80vh;
+  background-color: #9cf6fb;
+  padding: 0px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center ;
+ 
+}
+.big-form h3{
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: black;
+
+}
+
+.form2{
+
+  background-color: white;
+  padding: 40px 20px;
+  width: max-content;
+  height: max-content;
+  box-shadow: 0 0 30px black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+.headings{
+  
+  font-size: 1.3rem;
+  line-height: 3rem;
+}
+.headingbox{
+  
+  margin-left: 10px;
+  margin-right: 15px;
+}
+.messagebox1{
+
+  resize: none;
+
+}
+
+
+@media(max-width:600px) {
+
+  .big-form{
+    height: 85vh;
+  }
+
+ .form2{
+  height: max-content;
+  width: 100%;
+  justify-content: flex-start;
+ }
+.headings{
+ display: inline-block;
+ margin-bottom: 3px;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+.headingbox{
+  
+  margin-left: 0;
+  margin-right: 0;
+}
+
+}
+
+/* loginnnnnnnnnnnn formmmmm---------------------------------- */
+
+/* .loginS{
+  height: 80vh;
+  display: flex;
+  /* flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  background-color: #00abe1;
+  
+}
+
+.loginh {
+  
+  font-size: 2rem;
+  text-align: center;
+  
+}
+.loginF{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 350px;
+  height: 60vh;
+  background-color: white;
+  position: relative;
+
+}
+
+.loginF form{
+  margin-top: 40px;
+  display:flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input{
+  font-size: 1.1rem;
+  all: unset;
+  border: 1px solid black;
+  padding: 0.1rem;
+  border-radius: 1px;
+
+ 
+}
+
+.loginF:focus input{
+
+  outline-color: #00abe1;
+}
+.input:focus + label{
+  
+  transform: translateY(-15px) scale(0.7);
+  color: #00abe1;
+  background-color: white;
+  
+  
+}
+.input:focus{
+  
+  border: 1px solid #00abe1;
+}
+
+.label{
+  position: absolute;
+  padding: 2px 10px;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+} */
+
+
+.loginS {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00abe1;
+}
+
+.loginh {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.loginF {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 350px;
+  height: max-content;
+  background-color: white;
+  position: relative;
+}
+
+.loginF form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* wrapper for each input + label */
+.inputBox {
+  position: relative;
+  width: 100%;
+}
+
+/* input styling */
+.input {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 1rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+  outline: none;
+  background: none;
+}
+
+/* focus border */
+.input:focus {
+  border-color: #00abe1;
+}
+
+/* label styling */
+.label {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  font-size: 1rem;
+  color: #777;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  background: white; /* keeps text readable */
+  padding: 0 5px;
+}
+
+/* floating effect when input is focused OR not empty */
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+  top: -8px;
+  left: 5px;
+  font-size: 0.8rem;
+  color: #00abe1;
+}
+
+
+.signinbtn{
+  width: 100%;
+  background-color: rgb(48, 48, 204);
+  color: white;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.3rem;
+}
+.other {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: -15px;
+  color: #999;
+  font-weight: 100;
+}
+.other1{
+  margin-top: -15px;
+  display: flex;
+  justify-content: center;
+  
+  gap: 6px;
+}
+
+.faceb{
+  background-color: #99999975;
+  display: flex;
+
+  flex: 0 0 100px;
+  justify-content: center;
+  align-items: center;
+  color: #595858;
+  font-size: 1.2rem;
+  height: 30px;
+}
+
+.google{
+  
+  background-color: #99999975;
+  display: flex;
+  flex: 0 0 100px;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+.google-btn{
+  
+  
+  object-fit: contain;
+  height: 30px;
+  width: 100%;
+  background-color: #99999900;
+  border: 1px solid #acaaaa;
+ 
+  overflow: hidden;
+  cursor: pointer;
+}
+.google-btn img{
+  margin-top: 2px;
+  width: 25px;
+}
+
+.faceb-btn{
+  
+  
+  object-fit: contain;
+  height: 30px;
+  width: 100%;
+  background-color: #99999900;
+  border: 1px solid #acaaaa;
+ 
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.faceb-btn img{
+  width: 30px;
+}
+
+.faceb-btn:hover{
+  box-shadow: 0 0 3px black;
+}
+
+.google-btn:hover{
+  box-shadow: 0 0 3px black;
+}
+
+
+
+
+.fbpass{
+  
+  display: flex;
+ justify-content: center;
+  
+}
+.fpass{
+  
+  margin-top: -10px;
+  text-align: center;
+  color: rgb(67, 67, 152);
+  text-decoration: none;
+}
+.fpass:hover{
+
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+/* language barrrrrrrrrrrrrrrrrrr */
+
+.langu{
+  display: flex;
+  justify-content: center;
+  height: max-content;
+  background-color: #77d6c0;
+  padding: 40px;
+  
+}
+.langus{
+  color: black;
+  height: max-content;
+  text-align: center;
+  
+  width: 600px;
+}
+.langus h4{
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.lang{
+  text-align: left;
+  font-size: 1.7rem;
+  padding: 10px;
+  font-weight: 900;
+
+}
+.bar{
+  margin-top: 10px;
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid black ;
+  overflow: hidden;
+}
+
+
+.english{
+   background-color: #1c8f8d;
+  /* --target-width:100%;
+  animation: fill 0.9s forwards; */
+}
+
+.german{
+   background-color: #1c8f8d;
+  /* --target-width:100%;
+  animation: fill 0.9s forwards; */
+}
+
+.urdu{
+
+  background-color: #1c8f8d;
+  /* --target-width:100%;
+  animation: fill 0.9s forwards; */
+}
+
+/* @keyframes fill{
+  from{
+    width: 0;
+  }
+  to{
+    width: var(--target-width);
+  }
+} */
+
+
+/* languageeeee*/
+
+
+
+/* Inner filled part of bar */
+.progress {
+  height: 100%;
+  border-radius: 20px;
+ 
+  
+  width: 0; /* start empty, animation will fill */
+   transition: width 2s ease; /* smooth animation */
+}
+
