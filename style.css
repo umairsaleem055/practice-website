@@ -427,7 +427,7 @@ header{
 
 
 
-/* lets seeeeeeeeeeeeeeeeeee */
+/* Introduction */
 
 #about{
   display: flex;
@@ -443,9 +443,7 @@ header{
   box-shadow: 0 0 32px black;
   height: 45vh;
   width: 1000px;
- 
   border-radius: 20px;
-
   overflow: hidden;
 }
 
@@ -457,8 +455,6 @@ header{
   opacity: 0;
   transform: translateX(-70px);
   transition: all 1s ease-in-out;
-  
-
 }
 
 .text-g{
@@ -679,19 +675,6 @@ textarea {
 }
 
 }
-
-
-
-
-
-
-
-
-
-
-/* education sectionnnnnnnnnnnnnnnnnnnnnnnnnnn*/
-
-
 
 /* form filllllllllllllllllllllllllllllllllllllllllll*/
 .big-form{
@@ -1063,47 +1046,108 @@ textarea {
   overflow: hidden;
 }
 
+/* Inner filled part of bar */
+.progress {
+  height: 100%;
+  border-radius: 20px;
+  width: 0; /* start empty, animation will fill */
+   transition: width 2s ease; /* smooth animation */
+}
 
 .english{
    background-color: #1c8f8d;
-  /* --target-width:100%;
-  animation: fill 0.9s forwards; */
+ 
 }
 
 .german{
    background-color: #1c8f8d;
-  /* --target-width:100%;
-  animation: fill 0.9s forwards; */
+  
 }
 
 .urdu{
 
   background-color: #1c8f8d;
-  /* --target-width:100%;
-  animation: fill 0.9s forwards; */
+  
 }
 
-/* @keyframes fill{
-  from{
-    width: 0;
-  }
-  to{
-    width: var(--target-width);
-  }
-} */
 
+ /* timeline */
 
-/* languageeeee*/
-
-
-
-/* Inner filled part of bar */
-.progress {
-  height: 100%;
-  border-radius: 20px;
- 
+ .timeline-section{
+  background-color: #1c8f8d;
+  height: 80vh;
+  width: 100%;
   
-  width: 0; /* start empty, animation will fill */
-   transition: width 2s ease; /* smooth animation */
+ }
+
+ .timeline{
+  position:relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: #0a174e; */
+ }
+ .timeline h4{
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+ }
+.timeline-date{
+  font-size: clamp(10px,2vw,20px);
+  margin-bottom: 5px;
+}
+ .timeline::before{
+  content: ' ';
+  margin-top: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border: 2px solid black;
+  left: 50%;
+  transform: translateX(-50%);
+  
+ }
+
+ .what{
+  
+  width: 100%;
+  max-width: 45%;
+  position: relative;
+  padding: 20px;
+  
+
+ }
+ .timeline-box{  
+  
+ width: 100%;
+  max-width: 100%;
+  height: max-content;
+  font-size: clamp(8px,2vw,20px);
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px 10px;
+  text-align: left;
+  box-shadow:0 0 20px black;
+
+  /* word-wrap: break-word; */
+ }
+
+ .timeline .what:nth-child(odd) {
+  
+  left: 5%; 
+  
+  .timeline-date{
+
+    text-align: right;
+
+  }
+}
+
+.timeline .what:nth-child(even) {
+  left: 50%;            /* even items right */
+  
+  padding: 15px;
+
+ 
 }
 
